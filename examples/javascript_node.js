@@ -1,3 +1,5 @@
+// Authenticate and request data using Node.js and the request module from NPM
+
 var request = require('request');
 var api = 'https://api.helios.earth/v1';
 var auth = {
