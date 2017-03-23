@@ -1,4 +1,4 @@
-var api = 'https://api.exelishelios.com/1.2';
+var api = 'https://api.helios.earth/v1';
 var api_key_id = '';
 var api_key_secret = '';
 var jwt;
