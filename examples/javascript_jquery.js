@@ -1,3 +1,11 @@
+// Authenticate and request data using jQuery
+//
+// Note that we are storing the API key id and secret in JavaScript code here
+// to simplify the example. In general, you will not want to do this since the
+// browser will not be able to protect the secret value. For production apps,
+// consider generating your access tokens on your own server and then have your
+// app retrieve the new access tokens as they are available.
+
 var api = 'https://api.helios.earth/v1';
 var api_key_id = '';
 var api_key_secret = '';
