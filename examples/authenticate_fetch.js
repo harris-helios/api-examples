@@ -20,6 +20,7 @@ fetch(API + '/oauth/token', {
     client_secret: API_KEY_SECRET
    })
 })
+.then(response => response.json())
 .then(fetchData)
 .catch(err => {
   console.log('Error retrieving access token: ' + err.message);
@@ -28,7 +29,8 @@ fetch(API + '/oauth/token', {
 // Request some data by including the access token in the Authorization header
 function fetchData(json) {
   fetch(API + '/cameras', {
-    credentials: 'include'  // our access token was sent in a cookie as well
+    headers: {'Authorization': 'Bearer ' + json.access_token},
+    credentials: 'include'
   })
   .then(response => response.json())
   .then(json => {
